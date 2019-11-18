@@ -158,7 +158,7 @@ var dubai = {
 dubai.getCustomers(dubai.min, dubai.max);
 dubai.getCookies(23, 65);
 dubai.render();
-console.table(dubai);
+//console.table(dubai);
 //randomNumber
 function getRandomCustome(min, max) {
   return Math.ceil(Math.random() * (max - min + 1)) + min ;
@@ -213,7 +213,7 @@ var paris = {
 paris.getCustomers(paris.min, paris.max);
 paris.getCookies(23, 65);
 paris.render();
-//console.table(tokyo);
+//console.table(paris);
 //randomNumber
 function getRandomCustom(min, max) {
   return Math.ceil(Math.random() * (max - min + 1)) + min ;
