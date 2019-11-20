@@ -38,10 +38,6 @@ Shop.prototype.getCookiesPerHour = function() {
     this.total += this.salesPerHour[i];
   }
 };
-<<<<<<< HEAD
-=======
-
->>>>>>> lab8
 Shop.prototype.render = function() {
   var trEl = document.createElement('tr');
   tableEl.appendChild(trEl);
