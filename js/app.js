@@ -1,6 +1,7 @@
 var shops = [];
 var container = document.getElementById('cookiesShop');
 var tableEl = document.createElement('table');
+var form = document.getElementById('ShopForm');
 container.appendChild(tableEl);
 var hours = [
   '6am',
@@ -37,6 +38,10 @@ Shop.prototype.getCookiesPerHour = function() {
     this.total += this.salesPerHour[i];
   }
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> lab8
 Shop.prototype.render = function() {
   var trEl = document.createElement('tr');
   tableEl.appendChild(trEl);
@@ -52,7 +57,20 @@ Shop.prototype.render = function() {
   trEl.appendChild(totalTdEl);
   totalTdEl.textContent = this.total;
 };
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+  var name = event.target.name.value;
+  var min = event.target.min.value;
+  var max = event.target.max.value;
+  var avg = event.target.avg.value;
+  var show = new Shop(name, min, max, avg);
+  var rowCount = tableEl.rows.length;
+  tableEl.deleteRow(rowCount - 1);
+  show.render();
+  renderFooter();
+  document.getElementById('ShopForm').reset();
 
+});
 var seattle = new Shop('Seattle', 23, 65, 6.3);
 var tokyo = new Shop('Tokyo', 3, 24, 1.2);
 var dubai = new Shop('Dubai', 11, 38, 3.7);
